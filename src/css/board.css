@@ -1,0 +1,33 @@
+body {
+}
+
+.board {
+    width: 95%;
+    margin: 50px auto 0 50px;
+}
+
+.digit {
+    display: inline-block;
+    font-size: 70px;
+    margin-left: 15px;
+}
+
+.free-circle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url('../assets/free-circle.svg') no-repeat;
+    background-size: 100px 100px;
+}
+
+.taken-circle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url('../assets/taken-circle.svg') no-repeat;
+    background-size: 100px 100px;
+}
+
+.col-md-1 {
+    width: 11.1%;
+}
