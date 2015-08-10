@@ -1,32 +1,33 @@
 board.controller('BoardController', function BoardController($scope) {
-    $scope.data =
-        [[
-            {
-                number: 1
-            },
-            {
-                number: 2
-            },
-            {
-                number: 3
-            },
-            {
-                number: 4
-            },
-            {
-                number: 5
-            },
-            {
-                number: 6
-            },
-            {
-                number: 7
-            },
-            {
-                number: 8
-            },
-            {
-                number: 9
-            }
-        ]];
+
+});
+
+board.directive('toggleClass', function () {
+    return {
+        restrict: 'A',
+        template: '<span ng-click="localFunction()" ng-class="selected ? \'taken-circle\' : \'free-circle\'"  ng-transclude></span>',
+        replace: true,
+        scope: {
+            model: '='
+        },
+        transclude: true,
+        link: function (scope, element, attrs) {
+            scope.model = {};
+
+            scope.localFunction = function () {
+                if (!scope.model.value) {
+                    scope.model.value = scope.$id;
+                } else {
+                    scope.model.value = undefined;
+                }
+            };
+            scope.$watch('model.value', function () {
+                if (scope.model.value && !scope.selected) {
+                    scope.selected = "active";
+                } else {
+                    scope.selected = '';
+                }
+            });
+        }
+    };
 });
