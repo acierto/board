@@ -28,7 +28,7 @@ body {
     background-size: 100px 100px;
 }
 
-.col-md-1 {
+.col-md-1, .col-sm-1 {
     width: 11.1%;
 }
 
