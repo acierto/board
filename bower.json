@@ -7,10 +7,11 @@
   ],
   "directory": "src",
   "dependencies": {
-    "angular": "1.4.2",
-    "angular-mocks": "1.4.2",
-    "angular-route": "1.4.2",
-    "angular-sanitize": "1.4.2",
+    "angular": "1.4.4",
+    "angular-mocks": "1.4.4",
+    "angular-route": "1.4.4",
+    "angular-sanitize": "1.4.4",
+    "angular-touch": "1.4.4",
     "angular-ui-router": "0.2.15",
     "bootstrap": "3.3.5",
     "lodash": "3.10.0"
